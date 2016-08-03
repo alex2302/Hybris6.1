@@ -1,0 +1,11 @@
+#Ant properties
+#Wed Jun 22 17:29:56 CEST 2016
+builddate=20160622 1729
+description=promotionsbackoffice
+group.id=de.hybris.platform
+module.name=platform-module
+name=promotionsbackoffice
+releasedate=20160621 1754
+vendor=hybris
+version=6.0.0.0-SNAPSHOT
+version.api=6.0.0

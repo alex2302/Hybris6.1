@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config xmlns="http://www.hybris.com/cockpit/config">
+
+	<context merge-by="module" parent="auto" type="SAPGlobalConfiguration"
+		component="editor-area">
+		<editorArea:editorArea
+			xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+			<editorArea:tab
+				xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.backendconnectivity">
+				<section name="hmc.section.oaa">
+					<attribute qualifier="sapoaa_carHttpDestination" />
+					<attribute qualifier="sapoaa_carClient" />
+				</section>
+			</editorArea:tab>
+		</editorArea:editorArea>
+	</context>
+
+
+	<context merge-by="module" parent="auto" type="SAPConfiguration"
+		component="editor-area">
+		<editorArea:editorArea
+			xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+			<editorArea:tab
+				xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.oaa">
+				<section name="hmc.section.oaa">
+					<attribute qualifier="sapoaa_oaaProfile" />
+					<attribute qualifier="sapoaa_consumerId" />
+				</section>
+			</editorArea:tab>
+		</editorArea:editorArea>
+	</context>
+
+
+	<context merge-by="type" parent="auto" type="AbstractOrderEntry"
+		component="editor-area">
+		<editorArea:editorArea
+			xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+			<editorArea:tab
+				xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.common">
+				<section name="hmc.section.scheduleLines">
+					<attribute qualifier="scheduleLines" />
+				</section>
+				<section name="hmc.section.sapSource">
+					<attribute qualifier="sapSource" />
+				</section>
+			</editorArea:tab>
+		</editorArea:editorArea>
+	</context>
+
+
+
+</config>

@@ -1,0 +1,9 @@
+$sourcingURL=https://ldcirmt.wdf.sap.corp:44344
+$userID=hy-idoc-in
+$password=Welcome1
+
+INSERT_UPDATE SAPHTTPDestination;&SAPHttpID;httpDestinationName[unique=true];targetURL;authenticationType(HTTPAuthenticationType.code);userid;password
+;sourcingHttpDestination;sourcingURL;$sourcingURL;BASIC_AUTHENTICATION;$userID;$password
+
+INSERT_UPDATE SAPGlobalConfiguration;core_name;replicateregistereduser;sapoaa_carHttpDestination(&SAPHttpID);sapcommon_erpLogicalSystem;sapoaa_carClient
+;OAATest;FALSE;sourcingHttpDestination;OAATEST;800

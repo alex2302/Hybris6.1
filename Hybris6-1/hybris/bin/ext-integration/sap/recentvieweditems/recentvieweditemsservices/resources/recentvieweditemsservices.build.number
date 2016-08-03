@@ -1,0 +1,11 @@
+#Ant properties
+#Thu Jun 23 02:08:19 CEST 2016
+builddate=20160623 0208
+description=recentvieweditemsservices
+group.id=de.hybris.platform
+module.name=platform-module
+name=recentvieweditemsservices
+releasedate=20160520 1117
+vendor=hybris
+version=6.0.0.0-SNAPSHOT
+version.api=6.0.0

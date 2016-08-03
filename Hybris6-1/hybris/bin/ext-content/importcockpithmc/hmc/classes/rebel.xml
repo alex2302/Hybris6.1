@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.zeroturnaround.com">
+  <classpath>
+    <dir name="/workspace/1-stage-importcockpit/source/importcockpithmc/hmc/classes" />
+  </classpath>
+</application>

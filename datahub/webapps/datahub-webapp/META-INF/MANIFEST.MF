@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: datahub-webapp
+Implementation-Version: 6.1.0.0-RC3
+Archiver-Version: Plexus Archiver
+Built-By: bamboouser
+Implementation-Vendor-Id: com.hybris.datahub
+Created-By: Apache Maven 3.1.1
+Build-Jdk: 1.8.0_45
+Implementation-Vendor: hybris AG
+

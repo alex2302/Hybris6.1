@@ -1,0 +1,289 @@
+
+<Server port="-1" shutdown="SHUTDOWN">
+
+  <Listener className="org.apache.catalina.core.JasperListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+  <Listener className="org.apache.catalina.mbeans.JmxRemoteLifecycleListener" rmiRegistryPortPlatform="9003" rmiServerPortPlatform="9004" />
+
+
+  <GlobalNamingResources>
+
+		<!-- If you want to use the jndi database resource please set db.pool.fromJNDI property and uncomment following block.
+			 Furthermore you have to copy the related jdbc library from platform/lib/dbdriver to the tomcat/lib folder -->
+		<!-- <Resource 	name="hybrisDS"
+ 						auth="Container"
+ 						type="javax.sql.DataSource"
+              		maxActive="90"
+              		maxIdle="90"
+              		maxWait="10000"
+              		testWhileIdle="true"
+						timeBetweenEvictionRunsMillis="10000"
+						minEvictableIdleTimeMillis="300000"
+						numTestsPerEvictionRun="100"
+						testOnBorrow="false"
+						testOnReturn="false"
+						whenExhaustedAction="1"
+              		username="root"
+             		password="a230269T!1"
+              		driverClassName="com.mysql.jdbc.Driver"
+              		url="jdbc:mysql://localhost/hybris6?useConfigs=maxPerformance&amp;characterEncoding=utf8" />
+        -->
+
+		<!-- If you want to use a mail JNDI resource please set mail.fromJNDI property and uncomment following block.
+		     Furthermore you have to copy the mail library from ext/core/lib to tomcat/lib -->
+		<!-- <Resource 	name="mail/Session" auth="Container"
+		        		type="javax.mail.Session"
+		        		mail.transport.protocol="smtp"
+		        		mail.smtp.host="${mail.smtp.server}"
+		        		mail.smtp.from="test@hybris.de"
+		        		description="Global E-Mail Resource"
+		    		/>-->
+
+  </GlobalNamingResources>
+
+
+  <Service name="Catalina" >
+
+	<Executor     name="hybrisExecutor"
+			        namePrefix="hybrisHTTP"
+			        maxThreads="200"
+			        minSpareThreads="40"
+			        maxIdleTime="10000"/>
+
+    <Connector port="9001"
+			   maxHttpHeaderSize="8192"
+			   maxPostSize="4194304"
+               maxThreads="200"
+               protocol="org.apache.coyote.http11.Http11Protocol"
+               executor="hybrisExecutor"
+               enableLookups="false"
+               acceptCount="100"
+               connectionTimeout="20000"
+               URIEncoding="UTF-8"
+               disableUploadTimeout="true" />
+
+    <Connector port="9002"
+			   maxHttpHeaderSize="8192"
+			   maxPostSize="4194304"
+               maxThreads="150"
+               protocol="org.apache.coyote.http11.Http11Protocol"
+               executor="hybrisExecutor"
+               enableLookups="false"
+               acceptCount="100"
+               connectionTimeout="20000"
+               disableUploadTimeout="true"
+               URIEncoding="UTF-8"
+               SSLEnabled="true"
+					scheme="https"
+					secure="true"
+					clientAuth="false"
+   				sslProtocol = "TLS"
+   				keystoreFile="${catalina.home}/lib/keystore"
+   				keystorePass="123456"
+                />
+
+    <!--
+    This might evaluate into 
+    <Connector protocol="AJP/1.3" port="8009" proxyPort="${proxy.http.port}" redirectPort="${proxy.ssl.port}" useIPVHosts="${tomcat.ajp.useipv}" />  
+    where the tomcat.ajp.port is mandatory property to render this connector. 
+     --> 
+		<Connector  protocol="AJP/1.3"  URIEncoding="UTF-8"  port="8009" />
+	
+
+    <Engine name="Catalina" defaultHost="localhost">
+
+			<Valve 	className="org.apache.catalina.valves.AccessLogValve"
+             		directory="c:\HYBRIS-6.1\hybris\log/tomcat"
+	      		 	prefix="access."
+        	   		suffix=".log"
+	      		 	pattern="combined"
+          />
+
+      <Host 	name="localhost"
+      			appBase="webapps"
+		       	unpackWARs="false"
+		       	autoDeploy="false">
+
+
+			<!-- 'testweb' extension's context for tenant 'junit' -->
+			<Context path="/test" docBase="C:\HYBRIS-6.1\hybris\bin\platform\ext\testweb/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="testweb" />
+			</Context>
+
+			<!-- 'mediaweb' extension's context for tenant 'master' -->
+			<Context path="/medias" docBase="C:\HYBRIS-6.1\hybris\bin\platform\ext\mediaweb/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="mediaweb" />
+			</Context>
+
+			<!-- 'maintenanceweb' extension's context for tenant 'master' -->
+			<Context path="/maintenance" docBase="C:\HYBRIS-6.1\hybris\bin\platform\ext\maintenanceweb/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="maintenanceweb" />
+			</Context>
+
+			<!-- 'oauth2' extension's context for tenant 'master' -->
+			<Context path="/authorizationserver" docBase="C:\HYBRIS-6.1\hybris\bin\platform\ext\oauth2/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="oauth2" />
+			</Context>
+
+			<!-- 'oauth2' extension's context for tenant 'junit' -->
+			<Context path="/authorizationserver_junit" docBase="C:\HYBRIS-6.1\hybris\bin\platform\ext\oauth2/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="oauth2" />
+			</Context>
+
+			<!-- 'hac' extension's context for tenant 'master' -->
+			<Context path="" docBase="C:\HYBRIS-6.1\hybris\bin\platform\ext\hac/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="hac" />
+			</Context>
+
+			<!-- 'hac' extension's context for tenant 'junit' -->
+			<Context path="/hac_junit" docBase="C:\HYBRIS-6.1\hybris\bin\platform\ext\hac/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="hac" />
+			</Context>
+
+			<!-- 'embeddedserver' extension's context for tenant 'master' -->
+			<Context path="/embeddedserver" docBase="C:\HYBRIS-6.1\hybris\bin\ext-platform-optional\embeddedserver/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="embeddedserver" />
+			</Context>
+
+			<!-- 'tomcatembeddedserver' extension's context for tenant 'master' -->
+			<Context path="/tomcatembeddedserver" docBase="C:\HYBRIS-6.1\hybris\bin\ext-platform-optional\tomcatembeddedserver/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="tomcatembeddedserver" />
+			</Context>
+
+			<!-- 'virtualjdbc' extension's context for tenant 'master' -->
+			<Context path="/virtualjdbc" docBase="C:\HYBRIS-6.1\hybris\bin\ext-platform-optional\virtualjdbc/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="virtualjdbc" />
+			</Context>
+
+			<!-- 'hmc' extension's context for tenant 'master' -->
+			<Context path="/hmc" docBase="C:\HYBRIS-6.1\hybris\bin\ext-platform-optional\hmc/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="hmc" />
+			</Context>
+
+			<!-- 'hmc' extension's context for tenant 'junit' -->
+			<Context path="/hmc_junit" docBase="C:\HYBRIS-6.1\hybris\bin\ext-platform-optional\hmc/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="hmc" />
+			</Context>
+
+			<!-- 'reportcockpit' extension's context for tenant 'master' -->
+			<Context path="/reportcockpit" docBase="C:\HYBRIS-6.1\hybris\bin\ext-cockpit\reportcockpit/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="reportcockpit" />
+			</Context>
+
+			<!-- 'admincockpit' extension's context for tenant 'master' -->
+			<Context path="/admincockpit" docBase="C:\HYBRIS-6.1\hybris\bin\ext-cockpit\admincockpit/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="admincockpit" />
+			</Context>
+
+			<!-- 'productcockpit' extension's context for tenant 'master' -->
+			<Context path="/productcockpit" docBase="C:\HYBRIS-6.1\hybris\bin\ext-content\productcockpit/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="productcockpit" />
+			</Context>
+
+			<!-- 'cmscockpit' extension's context for tenant 'master' -->
+			<Context path="/cmscockpit" docBase="C:\HYBRIS-6.1\hybris\bin\ext-content\cmscockpit/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="cmscockpit" />
+			</Context>
+
+			<!-- 'cscockpit' extension's context for tenant 'master' -->
+			<Context path="/cscockpit" docBase="C:\HYBRIS-6.1\hybris\bin\ext-channel\cscockpit/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="cscockpit" />
+			</Context>
+
+			<!-- 'acceleratorservices' extension's context for tenant 'master' -->
+			<Context path="/acceleratorservices" docBase="C:\HYBRIS-6.1\hybris\bin\ext-accelerator\acceleratorservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="acceleratorservices" />
+			</Context>
+
+			<!-- 'datahubadapter' extension's context for tenant 'master' -->
+			<Context path="/datahubadapter" docBase="C:\HYBRIS-6.1\hybris\bin\ext-integration\datahubadapter/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="datahubadapter" />
+			</Context>
+
+			<!-- 'sapcustomerb2c' extension's context for tenant 'master' -->
+			<Context path="/sapcustomerb2c" docBase="C:\HYBRIS-6.1\hybris\bin\ext-integration\sap\masterdata\sapcustomerb2c/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="sapcustomerb2c" />
+			</Context>
+
+			<!-- 'sapcustomerb2b' extension's context for tenant 'master' -->
+			<Context path="/sapcustomerb2b" docBase="C:\HYBRIS-6.1\hybris\bin\ext-integration\sap\masterdata\sapcustomerb2b/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="sapcustomerb2b" />
+			</Context>
+
+			<!-- 'sapordermgmtb2bservices' extension's context for tenant 'master' -->
+			<Context path="/sapordermgmtb2bservices" docBase="C:\HYBRIS-6.1\hybris\bin\ext-integration\sap\synchronousOM\sapordermgmtb2bservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="sapordermgmtb2bservices" />
+			</Context>
+
+			<!-- 'secureportaladdon' extension's context for tenant 'master' -->
+			<Context path="/secureportaladdon" docBase="C:\HYBRIS-6.1\hybris\bin\ext-addon\secureportaladdon/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="secureportaladdon" />
+			</Context>
+
+			<!-- 'yb2bacceleratorstorefront' extension's context for tenant 'master' -->
+			<Context path="/yb2bacceleratorstorefront" docBase="C:\HYBRIS-6.1\hybris\bin\custom\yb2bacceleratorstorefront/web/webroot" disableURLRewriting="true" useHttpOnly="true">
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="yb2bacceleratorstorefront" />
+			</Context>
+
+			<!-- 'ycommercewebservices' extension's context for tenant 'master' -->
+			<Context path="/rest" docBase="C:\HYBRIS-6.1\hybris\bin\ext-template\ycommercewebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="ycommercewebservices" />
+			</Context>
+
+			<!-- 'ycommercewebservices' extension's context for tenant 'junit' -->
+			<Context path="/rest_junit" docBase="C:\HYBRIS-6.1\hybris\bin\ext-template\ycommercewebservices/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="ycommercewebservices" />
+			</Context>
+
+			<!-- 'yacceleratorstorefront' extension's context for tenant 'master' -->
+			<Context path="/yacceleratorstorefront" docBase="C:\HYBRIS-6.1\hybris\bin\ext-template\yacceleratorstorefront/web/webroot" useHttpOnly="true" disableURLRewriting="true">
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="yacceleratorstorefront" />
+			</Context>
+
+			<!-- 'backoffice' extension's context for tenant 'master' -->
+			<Context path="/backoffice" docBase="C:\HYBRIS-6.1\hybris\bin\ext-backoffice\backoffice/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="backoffice" />
+			</Context>
+
+			<!-- 'mcc' extension's context for tenant 'master' -->
+			<Context path="/mcc" docBase="C:\HYBRIS-6.1\hybris\bin\ext-cockpit\mcc/web/webroot" >
+				<Manager pathname="" />
+				<Loader platformHome="C:\HYBRIS-6.1\hybris\bin\platform" className="de.hybris.tomcat.DiagnosticHybrisWebappLoader" deployName="default" webAppName="mcc" />
+			</Context>
+
+
+      </Host>
+
+    </Engine>
+
+  </Service>
+
+</Server>

@@ -1,0 +1,11 @@
+#Ant properties
+#Thu Jun 16 08:35:35 CEST 2016
+builddate=20160616 0835
+description=configurablebundleatddtests
+group.id=de.hybris.platform
+module.name=platform-module
+name=configurablebundleatddtests
+releasedate=20160609 1759
+vendor=hybris
+version=6.0.0.0-SNAPSHOT
+version.api=6.0.0

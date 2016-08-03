@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.zeroturnaround.com">
+  <classpath>
+    <dir name="/rp/tmp/pipelines/20160622152741_basecommerce_artifact_release_6.1.0/prepare/build/source/promotionshmc/hmc/classes" />
+  </classpath>
+</application>

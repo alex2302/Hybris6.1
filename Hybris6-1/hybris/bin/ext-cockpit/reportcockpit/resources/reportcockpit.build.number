@@ -1,0 +1,11 @@
+#Ant properties
+#Fri Jun 24 15:44:47 CEST 2016
+builddate=20160624 1544
+description=reportcockpit
+group.id=de.hybris.platform
+module.name=platform-module
+name=reportcockpit
+releasedate=20160608 1420
+vendor=hybris
+version=6.0.0.0-SNAPSHOT
+version.api=6.0.0

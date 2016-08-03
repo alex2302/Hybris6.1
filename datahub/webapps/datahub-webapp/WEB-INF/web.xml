@@ -1,0 +1,92 @@
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2000-2016 SAP SE or an SAP affiliate company.
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of SAP
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with SAP.
+  -->
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://java.sun.com/xml/ns/javaee"
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+            http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+		 id="datahub-webapp" version="3.0">
+
+	
+	<absolute-ordering/>
+
+	<display-name>com.hybris.datahub:datahub-webapp:6.1.0.0-RC3 - 2016.06.15-01:02-CEST</display-name>		
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>	
+
+	<context-param>
+		<param-name>contextClass</param-name>
+		<param-value>com.hybris.datahub.spring.ExtensionEnabledXmlWebApplicationContext</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>contextId</param-name>
+		<param-value>DataHubWebApplicationContext</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+
+	<resource-ref>
+		<description>Primary database</description>
+		<res-ref-name>datahub</res-ref-name>
+		<lookup-name>datahub</lookup-name>
+	</resource-ref>
+
+	<listener>
+		<listener-class>com.hybris.datahub.spring.DataHubServletContextListener</listener-class>
+	</listener>	
+
+	<servlet>
+		<servlet-name>Data Hub Web Services</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>com;de</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jersey.config.server.provider.classnames</param-name>
+			<param-value>org.glassfish.jersey.filter.LoggingFilter</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jersey.config.server.mediaTypeMappings</param-name>
+			<param-value>txt : text/plain, xml : application/xml, json : application/json</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jersey.config.disableMoxyJson</param-name>
+			<param-value>true</param-value>
+		</init-param>
+
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Data Hub Web Services</servlet-name>
+		<url-pattern>/v1/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Spring Security -->
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+</web-app>

@@ -1,0 +1,35 @@
+0    INFO  (main) [   ] o.e.j.u.log Logging initialized @284ms
+125  INFO  (main) [   ] o.e.j.s.Server jetty-9.2.11.v20150529
+140  WARN  (main) [   ] o.e.j.s.h.RequestLogHandler !RequestLog
+140  INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:/C:/HYBRIS-6.1/hybris/bin/ext-commerce/solrserver/resources/solr/server/contexts/] at interval 0
+624  INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+640  WARN  (main) [   ] o.e.j.s.SecurityHandler ServletContext@o.e.j.w.WebAppContext@3abbfa04{/solr,file:/C:/HYBRIS-6.1/hybris/bin/ext-commerce/solrserver/resources/solr/server/solr-webapp/webapp/,STARTING}{C:\HYBRIS-6.1\hybris\bin\ext-commerce\solrserver\resources\solr\server/solr-webapp/webapp} has uncovered http methods for path: /
+640  INFO  (main) [   ] o.a.s.s.SolrDispatchFilter SolrDispatchFilter.init(): WebAppClassLoader=667026744@27c20538
+655  INFO  (main) [   ] o.a.s.c.SolrResourceLoader JNDI not configured for solr (NoInitialContextEx)
+655  INFO  (main) [   ] o.a.s.c.SolrResourceLoader using system property solr.solr.home: C:\HYBRIS-6.1\hybris\config\solr\instances\default
+655  INFO  (main) [   ] o.a.s.c.SolrResourceLoader new SolrResourceLoader for directory: 'C:\HYBRIS-6.1\hybris\config\solr\instances\default\'
+733  INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\HYBRIS-6.1\hybris\config\solr\instances\default\solr.xml
+780  INFO  (main) [   ] o.a.s.c.CoresLocator Config-defined core root directory: C:\HYBRIS-6.1\hybris\data\solr\instances\default\cores
+796  INFO  (main) [   ] o.a.s.c.CoreContainer New CoreContainer 943870983
+796  INFO  (main) [   ] o.a.s.c.CoreContainer Loading cores into CoreContainer [instanceDir=C:\HYBRIS-6.1\hybris\config\solr\instances\default\]
+796  INFO  (main) [   ] o.a.s.c.CoreContainer loading shared library: C:\HYBRIS-6.1\hybris\config\solr\instances\default\lib
+796  WARN  (main) [   ] o.a.s.c.SolrResourceLoader Can't find (or read) directory to add to classloader: lib (resolved as: C:\HYBRIS-6.1\hybris\config\solr\instances\default\lib).
+811  INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory created with socketTimeout : 600000,connTimeout : 60000,maxConnectionsPerHost : 20,maxConnections : 10000,corePoolSize : 0,maximumPoolSize : 2147483647,maxThreadIdleTime : 5,sizeOfQueue : -1,fairnessPolicy : false,useRetries : false,
+936  INFO  (main) [   ] o.a.s.u.UpdateShardHandler Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+936  INFO  (main) [   ] o.a.s.l.LogWatcher SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+936  INFO  (main) [   ] o.a.s.l.LogWatcher Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+936  INFO  (main) [   ] o.a.s.c.CoreContainer Security conf doesn't exist. Skipping setup for authorization module.
+936  INFO  (main) [   ] o.a.s.c.CoreContainer No authentication plugin used.
+967  INFO  (main) [   ] o.a.s.c.CoresLocator Looking for core definitions underneath C:\HYBRIS-6.1\hybris\data\solr\instances\default\cores
+967  INFO  (main) [   ] o.a.s.c.CoresLocator Found 0 core definitions
+967  INFO  (main) [   ] o.a.s.s.SolrDispatchFilter user.dir=C:\HYBRIS-6.1\hybris\bin\ext-commerce\solrserver\resources\solr\server
+967  INFO  (main) [   ] o.a.s.s.SolrDispatchFilter SolrDispatchFilter.init() done
+967  INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@3abbfa04{/solr,file:/C:/HYBRIS-6.1/hybris/bin/ext-commerce/solrserver/resources/solr/server/solr-webapp/webapp/,AVAILABLE}{C:\HYBRIS-6.1\hybris\bin\ext-commerce\solrserver\resources\solr\server/solr-webapp/webapp}
+983  INFO  (main) [   ] o.e.j.s.ServerConnector Started ServerConnector@4d154ccd{HTTP/1.1}{0.0.0.0:8983}
+983  INFO  (main) [   ] o.e.j.s.Server Started @1270ms
+1420 INFO  (qtp859417998-20) [   ] o.a.s.s.SolrDispatchFilter [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=15 
+7372 INFO  (qtp859417998-15) [   ] o.a.s.s.SolrDispatchFilter [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=0 
+70037878 INFO  (qtp859417998-15) [   ] o.a.s.s.SolrDispatchFilter [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=4 
+70039026 INFO  (ShutdownMonitor) [   ] o.e.j.s.ServerConnector Stopped ServerConnector@4d154ccd{HTTP/1.1}{0.0.0.0:8983}
+70039026 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=943870983
+70039041 INFO  (ShutdownMonitor) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@3abbfa04{/solr,file:/C:/HYBRIS-6.1/hybris/bin/ext-commerce/solrserver/resources/solr/server/solr-webapp/webapp/,UNAVAILABLE}{C:\HYBRIS-6.1\hybris\bin\ext-commerce\solrserver\resources\solr\server/solr-webapp/webapp}

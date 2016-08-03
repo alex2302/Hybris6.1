@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.zeroturnaround.com">
+  <classpath>
+    <dir name="/rp/tmp/pipelines/20160615123110_commercesearch_artifact_release_6.1.0_3955d12/prepare/build/source/commercesearchhmc/hmc/classes" />
+  </classpath>
+</application>

@@ -1,0 +1,334 @@
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.69
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Apr 11 2016 07:57:09 UTC
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.69.0
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Linux
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            3.19.0-61-generic
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /usr/lib/jvm/jdk1.8.0_65/jre
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_65-b17
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /home/vagrant/comsol/datahub
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /home/vagrant/comsol/datahub
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/home/vagrant/comsol/datahub/conf/logging.properties
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Xms2048m
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Xmx4096m
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -XX:+UseConcMarkSweepGC
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -XX:+UseParNewGC
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -XX:+AlwaysPreTouch
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -XX:+DisableExplicitGC
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/home/vagrant/comsol/datahub/endorsed
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/home/vagrant/comsol/datahub
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/home/vagrant/comsol/datahub
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/home/vagrant/comsol/datahub/temp
+Jul 31, 2016 3:48:11 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Jul 31, 2016 3:48:11 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 3:48:11 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 872 ms
+Jul 31, 2016 3:48:11 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jul 31, 2016 3:48:11 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.69
+Jul 31, 2016 3:48:11 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive /home/vagrant/comsol/datahub/webapps/datahub-webapp.war
+Jul 31, 2016 3:48:12 PM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/home/vagrant/comsol/datahub/webapps/datahub-webapp/WEB-INF/lib/javax.el-api-2.2.4.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/el/Expression.class
+Jul 31, 2016 3:48:12 PM org.apache.catalina.startup.TaglibUriRule body
+INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/core is already defined
+Jul 31, 2016 3:48:12 PM org.apache.catalina.startup.TaglibUriRule body
+INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/fmt is already defined
+Jul 31, 2016 3:48:13 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 31, 2016 3:48:44 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deployment of web application archive /home/vagrant/comsol/datahub/webapps/datahub-webapp.war has finished in 32,576 ms
+Jul 31, 2016 3:48:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/host-manager
+Jul 31, 2016 3:48:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/host-manager has finished in 104 ms
+Jul 31, 2016 3:48:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/examples
+Jul 31, 2016 3:48:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/examples has finished in 178 ms
+Jul 31, 2016 3:48:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/ROOT
+Jul 31, 2016 3:48:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/ROOT has finished in 26 ms
+Jul 31, 2016 3:48:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/docs
+Jul 31, 2016 3:48:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/docs has finished in 25 ms
+Jul 31, 2016 3:48:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/manager
+Jul 31, 2016 3:48:44 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/manager has finished in 101 ms
+Jul 31, 2016 3:48:44 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 3:48:44 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 3:48:44 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 33107 ms
+Jul 31, 2016 3:48:48 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 3:48:48 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 3:48:48 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Jul 31, 2016 3:48:49 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/datahub-webapp] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@5fdc260f]) and a value of type [scala.concurrent.forkjoin.ForkJoinPool.Submitter] (value [scala.concurrent.forkjoin.ForkJoinPool$Submitter@4ba6d675]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jul 31, 2016 3:48:49 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/datahub-webapp] created a ThreadLocal with key of type [scala.concurrent.forkjoin.ThreadLocalRandom$1] (value [scala.concurrent.forkjoin.ThreadLocalRandom$1@75f46d50]) and a value of type [scala.concurrent.forkjoin.ThreadLocalRandom] (value [scala.concurrent.forkjoin.ThreadLocalRandom@4db79067]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jul 31, 2016 3:48:49 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 3:48:49 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 3:48:49 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 3:48:49 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 3:48:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.69
+Jul 31, 2016 3:48:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Apr 11 2016 07:57:09 UTC
+Jul 31, 2016 3:48:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.69.0
+Jul 31, 2016 3:48:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Linux
+Jul 31, 2016 3:48:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            3.19.0-61-generic
+Jul 31, 2016 3:48:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /usr/lib/jvm/jdk1.8.0_65/jre
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_65-b17
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /home/vagrant/comsol/datahub
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /home/vagrant/comsol/datahub
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/home/vagrant/comsol/datahub/conf/logging.properties
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Xms2048m
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Xmx4096m
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -XX:+UseConcMarkSweepGC
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -XX:+UseParNewGC
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -XX:+AlwaysPreTouch
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -XX:+DisableExplicitGC
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/home/vagrant/comsol/datahub/endorsed
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/home/vagrant/comsol/datahub
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/home/vagrant/comsol/datahub
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/home/vagrant/comsol/datahub/temp
+Jul 31, 2016 3:48:56 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Jul 31, 2016 3:48:56 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 3:48:56 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 590 ms
+Jul 31, 2016 3:48:56 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jul 31, 2016 3:48:56 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.69
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive /home/vagrant/comsol/datahub/webapps/datahub-webapp.war
+Jul 31, 2016 3:48:56 PM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/home/vagrant/comsol/datahub/webapps/datahub-webapp/WEB-INF/lib/javax.el-api-2.2.4.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/el/Expression.class
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.TaglibUriRule body
+INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/core is already defined
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.TaglibUriRule body
+INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/fmt is already defined
+Jul 31, 2016 3:48:56 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 31, 2016 3:49:26 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deployment of web application archive /home/vagrant/comsol/datahub/webapps/datahub-webapp.war has finished in 30,081 ms
+Jul 31, 2016 3:49:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/host-manager
+Jul 31, 2016 3:49:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/host-manager has finished in 68 ms
+Jul 31, 2016 3:49:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/examples
+Jul 31, 2016 3:49:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/examples has finished in 139 ms
+Jul 31, 2016 3:49:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/ROOT
+Jul 31, 2016 3:49:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/ROOT has finished in 35 ms
+Jul 31, 2016 3:49:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/docs
+Jul 31, 2016 3:49:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/docs has finished in 31 ms
+Jul 31, 2016 3:49:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/manager
+Jul 31, 2016 3:49:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/manager has finished in 40 ms
+Jul 31, 2016 3:49:26 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 3:49:26 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 3:49:26 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 30492 ms
+Jul 31, 2016 3:49:43 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 3:49:43 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 3:49:43 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Jul 31, 2016 3:49:43 PM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [/datahub-webapp] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@7dbf1cfd]) and a value of type [scala.concurrent.forkjoin.ForkJoinPool.Submitter] (value [scala.concurrent.forkjoin.ForkJoinPool$Submitter@35d756af]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jul 31, 2016 3:49:43 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 3:49:43 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 3:49:43 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 3:49:43 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.69
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Apr 11 2016 07:57:09 UTC
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.69.0
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Linux
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            3.19.0-61-generic
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /usr/lib/jvm/jdk1.8.0_65/jre
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_65-b17
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /home/vagrant/comsol/datahub
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /home/vagrant/comsol/datahub
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/home/vagrant/comsol/datahub/conf/logging.properties
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/home/vagrant/comsol/datahub/endorsed
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/home/vagrant/comsol/datahub
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/home/vagrant/comsol/datahub
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/home/vagrant/comsol/datahub/temp
+Jul 31, 2016 4:07:48 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Jul 31, 2016 4:07:48 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 4:07:48 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 468 ms
+Jul 31, 2016 4:07:48 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jul 31, 2016 4:07:48 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.69
+Jul 31, 2016 4:07:48 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive /home/vagrant/comsol/datahub/webapps/datahub-webapp.war
+Jul 31, 2016 4:07:49 PM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/home/vagrant/comsol/datahub/webapps/datahub-webapp/WEB-INF/lib/javax.el-api-2.2.4.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/el/Expression.class
+Jul 31, 2016 4:07:49 PM org.apache.catalina.startup.TaglibUriRule body
+INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/core is already defined
+Jul 31, 2016 4:07:49 PM org.apache.catalina.startup.TaglibUriRule body
+INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/fmt is already defined
+Jul 31, 2016 4:07:49 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 31, 2016 4:08:17 PM org.apache.catalina.core.StandardContext startInternal
+SEVERE: One or more listeners failed to start. Full details will be found in the appropriate container log file
+Jul 31, 2016 4:08:17 PM org.apache.catalina.core.StandardContext startInternal
+SEVERE: Context [/datahub-webapp] startup failed due to previous errors
+Jul 31, 2016 4:08:17 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deployment of web application archive /home/vagrant/comsol/datahub/webapps/datahub-webapp.war has finished in 28,929 ms
+Jul 31, 2016 4:08:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/host-manager
+Jul 31, 2016 4:08:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/host-manager has finished in 417 ms
+Jul 31, 2016 4:08:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/examples
+Jul 31, 2016 4:08:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/examples has finished in 441 ms
+Jul 31, 2016 4:08:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/ROOT
+Jul 31, 2016 4:08:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/ROOT has finished in 25 ms
+Jul 31, 2016 4:08:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/docs
+Jul 31, 2016 4:08:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/docs has finished in 22 ms
+Jul 31, 2016 4:08:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /home/vagrant/comsol/datahub/webapps/manager
+Jul 31, 2016 4:08:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /home/vagrant/comsol/datahub/webapps/manager has finished in 28 ms
+Jul 31, 2016 4:08:18 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 4:08:18 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 4:08:18 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 29956 ms
+Jul 31, 2016 5:18:21 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 5:18:21 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 5:18:21 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Jul 31, 2016 5:18:21 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 5:18:21 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8010"]
+Jul 31, 2016 5:18:21 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8090"]
+Jul 31, 2016 5:18:21 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8010"]

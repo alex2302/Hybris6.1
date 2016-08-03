@@ -1,0 +1,11 @@
+#Ant properties
+#Tue Jun 14 21:26:00 CEST 2016
+builddate=20160614 2125
+description=ondemandcommonhmc
+group.id=de.hybris.platform
+module.name=platform-module
+name=ondemandcommonhmc
+releasedate=20160614 1445
+vendor=hybris
+version=6.0.0.0-SNAPSHOT
+version.api=6.0.0

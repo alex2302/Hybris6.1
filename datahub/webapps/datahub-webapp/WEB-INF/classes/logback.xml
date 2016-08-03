@@ -1,0 +1,52 @@
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2000-2015 hybris AG
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of hybris
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with hybris.
+  -->
+
+<configuration>
+
+	<timestamp key="byDay" datePattern="yyyy-MM-dd"/>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d [%level] [%logger{20}] %msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<file>../logs/datahub_atr-${byDay}.log</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%d [%level] [%logger{20}] %msg%n</pattern>
+		</encoder>
+	</appender>
+	<logger name="com.hybris.kernel.services.aggregation" level="debug" />
+	<logger name="com.hybris.kernel" level="debug" />
+	<logger name="com.hybris.kernel.typesystem" level="debug" />
+	<logger name="com.hybris.kernel.utils.SystemInformationLogger" level="debug" />
+	<logger name="com.hybris.datahub" level="debug" />
+	<logger name="com.hybris.datahub.service.integration.impl.BlockingPollingConsumer" level="debug" />
+	<logger name="com.hybris.kernel.services.metadata.impl.DefaultMetadataService" level="error" />
+	<logger name="org.springframework" level="info" />
+	<logger name="org.springframework.integration.handler.LoggingHandler" level="warn" />
+	<logger name="org.reflections.Reflections" level="off" />
+	<logger name="org.hibernate" level="error" />
+	
+	<logger name="com.sap.retail.datahub.saparticle" level="warn" />
+	<logger name="com.hybris.datahub.sapidocintegration.IDOCMappingService" level="debug" /> 
+	<logger name="com.hybris.datahub.sapidocintegration.spring.HttpInboundService" level="info" />
+	<logger name="" level="debug" />
+	<root level="warn">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+	<contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+		<resetJUL>true</resetJUL>
+	</contextListener>
+</configuration>

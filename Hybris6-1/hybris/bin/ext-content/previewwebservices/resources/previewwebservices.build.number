@@ -1,0 +1,11 @@
+#Ant properties
+#Thu Jun 09 09:57:44 CEST 2016
+builddate=20160609 0957
+description=previewwebservices
+group.id=de.hybris.platform
+module.name=platform-module
+name=previewwebservices
+releasedate=20160608 1949
+vendor=hybris
+version=6.0.0.0-SNAPSHOT
+version.api=6.0.0

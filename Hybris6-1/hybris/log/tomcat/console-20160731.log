@@ -1,0 +1,23 @@
+STATUS | wrapper  | main    | 2016/07/31 10:00:21.418 | CTRL-C trapped.  Shutting down.
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | shutting down hybris registry..
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | error notifying tenant listener : ListableBeanFactory must not be null
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | java.lang.IllegalArgumentException: ListableBeanFactory must not be null
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | 	at org.springframework.util.Assert.notNull(Assert.java:112)
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | 	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:274)
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | 	at de.hybris.platform.jmx.MBeanRegisterUtilities.refreshMBeans(MBeanRegisterUtilities.java:158)
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | 	at de.hybris.platform.jmx.MBeanRegisterUtilities.getRegisteredBeans(MBeanRegisterUtilities.java:135)
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | 	at de.hybris.platform.core.JMXBeanLoader.beforeTenantShutDown(JMXBeanLoader.java:117)
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | 	at de.hybris.platform.core.AbstractTenant.notifyTenantListenersBeforeShutdown(AbstractTenant.java:1303)
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | 	at de.hybris.platform.core.AbstractTenant.doShutdown(AbstractTenant.java:997)
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | 	at de.hybris.platform.core.AbstractTenant.doShutDown(AbstractTenant.java:958)
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | 	at de.hybris.platform.core.Registry.destroy(Registry.java:309)
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | 	at de.hybris.platform.util.RedeployUtilities.shutdown(RedeployUtilities.java:75)
+INFO   | jvm 1    | main    | 2016/07/31 10:00:21.746 | 	at de.hybris.platform.util.RedeployUtilities$1.run(RedeployUtilities.java:39)
+INFO   | jvm 1    | main    | 2016/07/31 10:00:22.183 | INFO  [Thread-1] [DefaultCacheController] Removed listener from cache controller. Currently registered 0
+INFO   | jvm 1    | main    | 2016/07/31 10:00:22.183 | INFO  [Thread-1] [DefaultSolrServerService] Stopping Solr servers ...
+INFO   | jvm 1    | main    | 2016/07/31 10:00:22.183 | INFO  [Thread-1] [DefaultSolrServerService] Stopping Solr server for instance: [name: default, port: 8983]
+STATUS | wrapper  | main    | 2016/07/31 10:00:24.609 | CTRL-C trapped.  Forcing immediate shutdown.
+INFO   | jvm 1    | main    | 2016/07/31 10:00:24.609 | INFO  [Thread-1] [DefaultClusterNodeManagementService] Unregistering assigned cluster node id 0...
+ERROR  | wrapper  | main    | 2016/07/31 10:00:24.718 | JVM did not exit on request, termination requested.
+STATUS | wrapper  | main    | 2016/07/31 10:00:24.937 | JVM exited after being requested to terminate.
+STATUS | wrapper  | main    | 2016/07/31 10:00:25.264 | <-- Wrapper Stopped

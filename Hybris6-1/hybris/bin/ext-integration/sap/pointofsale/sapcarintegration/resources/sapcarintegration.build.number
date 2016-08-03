@@ -1,0 +1,11 @@
+#Ant properties
+#Thu Jun 23 16:50:03 CEST 2016
+builddate=20160623 1650
+description=sapcarintegration
+group.id=de.hybris.platform
+module.name=platform-module
+name=sapcarintegration
+releasedate=20160622 1912
+vendor=hybris
+version=6.0.0.0-SNAPSHOT
+version.api=6.0.0

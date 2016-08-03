@@ -1,0 +1,11 @@
+#Ant properties
+#Wed Jun 22 13:11:19 UTC 2016
+builddate=20160622 1311
+description=smarteditwebservices
+group.id=de.hybris.platform
+module.name=platform-module
+name=smarteditwebservices
+releasedate=20160614 1445
+vendor=hybris
+version=6.0.0.0-SNAPSHOT
+version.api=6.0.0

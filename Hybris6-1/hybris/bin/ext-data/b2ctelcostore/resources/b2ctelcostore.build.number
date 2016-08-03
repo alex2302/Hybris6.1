@@ -1,0 +1,11 @@
+#Ant properties
+#Tue Jun 14 17:01:52 CEST 2016
+builddate=20160614 1701
+description=b2ctelcostore
+group.id=de.hybris.platform
+module.name=platform-module
+name=b2ctelcostore
+releasedate=20160512 1314
+vendor=hybris
+version=6.0.0.0-SNAPSHOT
+version.api=6.0.0

@@ -1,0 +1,86 @@
+
+<!--
+  ~ [y] hybris Platform
+  ~ 
+  ~ Copyright (c) 2000-2016 SAP SE
+  ~ All rights reserved.
+  ~ 
+  ~ This software is the confidential and proprietary information of SAP 
+  ~ Hybris ("Confidential Information"). You shall not disclose such 
+  ~ Confidential Information and shall use it only in accordance with the 
+  ~ terms of the license agreement you entered into with SAP Hybris.
+  -->
+
+<Server port="-1" shutdown="SHUTDOWN">
+
+  <Listener className="org.apache.catalina.core.JasperListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+
+  <GlobalNamingResources>
+  </GlobalNamingResources>
+
+
+  <Service name="Catalina" >
+
+	<Executor     name="hybrisExecutor"
+			        namePrefix="hybrisHTTP"
+			        maxThreads="200"
+			        minSpareThreads="40"
+			        maxIdleTime="10000"/>
+
+    <Connector port="8080"
+    				maxHttpHeaderSize="8192"
+               maxThreads="200"
+               protocol="org.apache.coyote.http11.Http11Protocol"
+               executor="hybrisExecutor"
+               enableLookups="false"
+               acceptCount="100"
+               connectionTimeout="20000"
+               URIEncoding="UTF-8"
+               disableUploadTimeout="true" />
+
+    <Connector port="9793"
+    				maxHttpHeaderSize="8192"
+               maxThreads="150"
+               protocol="org.apache.coyote.http11.Http11Protocol"
+               executor="hybrisExecutor"
+               enableLookups="false"
+               acceptCount="100"
+               connectionTimeout="20000"
+               disableUploadTimeout="true"
+               URIEncoding="UTF-8"
+               SSLEnabled="true"
+					scheme="https"
+					secure="true"
+					clientAuth="false"
+   				sslProtocol = "TLS"
+   				keystoreFile="/home/vagrant/comsol/HYBRIS-6.1/hybris/bin/platform/tomcat/lib/keystore"
+   				keystorePass="123456"
+                />
+
+
+    <Engine name="Catalina" defaultHost="localhost">
+
+			<Valve 	className="org.apache.catalina.valves.AccessLogValve"
+             		directory="/home/vagrant/comsol/HYBRIS-6.1/installer/work/datahub-tomcat/logs/tomcat"
+	      		 	prefix="access."
+        	   		suffix=".log"
+	      		 	pattern="combined"
+          />
+
+      <Host 	name="localhost"
+      			appBase="webapps"
+		       	unpackWARs="true"
+		       	autoDeploy="false">
+
+
+			
+
+
+      </Host>
+
+    </Engine>
+
+  </Service>
+
+</Server>
